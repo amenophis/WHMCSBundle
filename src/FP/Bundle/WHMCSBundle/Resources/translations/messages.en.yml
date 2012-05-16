@@ -1,0 +1,7 @@
+#lookup: "translation"
+signin: "Signin"
+signup: "Signup" 
+signup.already: "Already a signed up?"
+Password: "Password"
+Password again: "Password again"
+Email: "Email"

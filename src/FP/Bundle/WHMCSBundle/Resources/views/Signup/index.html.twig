@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block header %}
+<h1>{{ "signup"|trans }}</h1>
+{% endblock %}            
+{% block body %}
+  {% spaceless %}
+  <form action="{{ path("fp_whmcs_signup_process") }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <a href="{{ path("fp_whmcs_security") }}">{{ "signup.already"|trans }}</a>
+    <button type="submit">{{ "signup"|trans }}</button>
+  </form>
+  {% endspaceless %}
+{% endblock %}

@@ -1,0 +1,21 @@
+# signup:
+    # resource: "@FPWHMCSBundle/Controller/SignupController.php"
+    # type:     annotation
+    
+fp_whmcs_signup:
+  pattern: "/signup"
+  defaults: { _controller: FPWHMCSBundle:Signup:index }
+  requirements:
+    _method: GET
+      
+fp_whmcs_signup_process:
+  pattern: "/signup/process"
+  defaults: { _controller: FPWHMCSBundle:Signup:indexProcess }
+  requirements:
+    _method: POST
+
+fp_whmcs_signup_success:
+  pattern: "/signup/complete"
+  defaults: { _controller: FPWHMCSBundle:Signup:complete }
+  requirements:
+    _method: GET

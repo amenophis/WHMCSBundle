@@ -1,0 +1,16 @@
+parameters:
+  fp.whmcs.host:        ""
+  fp.whmcs.username:    ""
+  fp.whmcs.password:    ""
+  fp.whmcs.connector:   "FP\WHMCS\Adapter\Json\Connector"
+  fp.whmcs.user.provider.class: FP\Bundle\WHMCSBundle\Security\UserProvider
+    
+services:
+  fp.whmcs:
+    class: %fp.whmcs.connector%
+    arguments: [%fp.whmcs.host%, %fp.whmcs.username%, %fp.whmcs.password%]
+  fp.whmcs.user.provider:
+    class: %fp.whmcs.user.provider.class%
+    arguments: [@fp.whmcs]
+  fp.whmcs.encoder:
+    class: FP\Bundle\WHMCSBundle\Security\Encoder\WHMCS

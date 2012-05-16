@@ -1,0 +1,5 @@
+#lookup: "translation"
+user.email.invalid: "Email is invalid"
+user.email.used: "Email is in use"
+user.password.to.short: "Password is too short"
+user.password.match: "Passwords did not match"

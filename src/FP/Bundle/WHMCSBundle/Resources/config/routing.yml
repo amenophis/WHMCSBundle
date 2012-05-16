@@ -1,0 +1,5 @@
+signup:
+    resource: "@FPWHMCSBundle/Resources/config/routing/signup.yml"
+    
+signin:
+    resource: "@FPWHMCSBundle/Resources/config/routing/signin.yml"

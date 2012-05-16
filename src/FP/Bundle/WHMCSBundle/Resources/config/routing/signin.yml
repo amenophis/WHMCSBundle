@@ -1,0 +1,15 @@
+fp_whmcs_secured:
+  pattern: /secured
+  defaults: { _controller: FPWHMCSBundle:Secured:index }
+
+fp_whmcs_security:
+  pattern: /security
+  defaults: { _controller: FPWHMCSBundle:Security:index }
+  
+fp_whmcs_security_signout:
+  pattern: /security/signout
+  defaults: { _controller: FPWHMCSBundle:Security:signout }
+
+fp_whmcs_security_check:
+  pattern: /security/check
+  defaults: { _controller: FPWHMCSBundle:Security:check }
