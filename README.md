@@ -15,7 +15,9 @@ Make the following alterations to have WHMCS working within your application.
 
 **app/autoload.php**
 ```php
-//add just after the if statement that includes composers autoloader
+/* Add just after the if statement that includes composers autoloader. 
+ * You will need to change the paths to match your installs for both FPWHMCSBundle and FP-WHMCS-Connector.
+ */
 $loader->add('FP\\Bundle\\WHMCSBundle', __DIR__.'/../vendor/fp-whmcs-bundle/src/');
 $loader->add('FP\\WHMCS', __DIR__.'/../vendor/fp-whmcs-connector/src/');
 ```
