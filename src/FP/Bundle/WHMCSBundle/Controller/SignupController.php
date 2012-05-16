@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the FP-WHMCSBunble
+ * This file is part of the FPWHMCSBundle
  *
  * (c) IFP Ltd <support@french-property.com>
  *

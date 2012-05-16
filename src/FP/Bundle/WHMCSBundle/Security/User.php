@@ -3,7 +3,10 @@
 namespace FP\Bundle\WHMCSBundle\Security;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-
+/**
+ * User that implements UserInterface
+ * @author Daniel Chalk <snathcfrigate@gmail.com>
+ */
 class User implements UserInterface
 {
 	protected $roles;

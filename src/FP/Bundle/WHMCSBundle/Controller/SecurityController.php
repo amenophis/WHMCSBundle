@@ -1,10 +1,23 @@
 <?php
 
+/*
+ * This file is part of the FPWHMCSBundle
+ *
+ * (c) IFP Ltd <support@french-property.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+ 
 namespace FP\Bundle\WHMCSBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\SecurityContext;
 
+/**
+ * SecurityController
+ * @author Daniel Chalk <dan@french-property.com>
+ */
 class SecurityController extends Controller
 {
 
