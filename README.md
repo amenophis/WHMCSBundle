@@ -13,10 +13,14 @@ Quick setup
 
 Make the following alterations to have WHMCS working within your application.
 
-**autoloading**
+**autoload.php**
+```php
+//add just after the if statement that includes composers autoloader
+$loader->add('FP\\Bundle\\WHMCSBundle', __DIR__.'/../vendor/fp-whmcs-bundle/src/');
+$loader->add('FP\\WHMCS', __DIR__.'/../vendor/fp-whmcs-connector/src/');
+```
 
-
-**app/Kernel.php**
+**app/AppKernel.php**
 ```php
 $bundles[] = new FP\Bundle\WHMCSBundle\FPWHMCSBundle();
 ```
