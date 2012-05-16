@@ -1,20 +1,28 @@
-FP-WHMCSBundle
+FPWHMCSBundle
 ==============
+Allow your WHMCS users to signin and signup via symfony2
+
+REQUIREMENTS
+------------
+* Symfony 2.1+
+* [FP-WHMCS-Connector ](https://github.com/ifp/FP-WHMCS-Connector "FP-WHMCS-Connector")
+
 
 Example configs
 ---------------
 
-app/config/config.yml
----------------------
+**app/config/config.yml**
+
 ```yaml
 fpwhmcs:
-  host:        "https://domainname" #don't provide an absolute url, just the protocol and the domain name please
+  #please don't provide an absolute url, just the protocol and the domain name
+  host:        "https://domainname" 
   username:    "api-account"
   password:    "md5-of-your-password"
 ```
 
-app/config/security.yml
------------------------
+**app/config/security.yml**
+
 ```yaml
 security:
     encoders:

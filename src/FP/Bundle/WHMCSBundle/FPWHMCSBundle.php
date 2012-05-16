@@ -21,12 +21,7 @@ use FP\Bundle\WHMCSBundle\DependencyInjection\FPWHMCSExtension;
  * @author Daniel Chalk <snathcfrigate@gmail.com>
  */
 class FPWHMCSBundle extends Bundle
-{
-    public function boot()
-    {
-        $configurator = $this->container->get('sensio.distribution.webconfigurator');
-    }
-    
+{    
     public function build(ContainerBuilder $container)
     {
         parent::build($container);
