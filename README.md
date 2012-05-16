@@ -7,6 +7,9 @@ REQUIREMENTS
 * Symfony 2.1+
 * [FP-WHMCS-Connector ](https://github.com/ifp/FP-WHMCS-Connector "FP-WHMCS-Connector")
 
+## Notes ##
+Support for composer will be added very soon.
+Unit tests will soon be included.
 
 Quick setup
 -----------
