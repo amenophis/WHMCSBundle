@@ -8,8 +8,18 @@ REQUIREMENTS
 * [FP-WHMCS-Connector ](https://github.com/ifp/FP-WHMCS-Connector "FP-WHMCS-Connector")
 
 
-Example configs
----------------
+Quick setup
+-----------
+
+Make the following alterations to have WHMCS working within your application.
+
+**autoloading**
+
+
+**app/Kernel.php**
+```php
+$bundles[] = new FP\Bundle\WHMCSBundle\FPWHMCSBundle();
+```
 
 **app/config/config.yml**
 
@@ -34,4 +44,37 @@ security:
     providers:
       fp.whmcs.user.provider:
         id: fp.whmcs.user.provider
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        login:
+            pattern:  ^/security$
+            security: false
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            form_login:
+                check_path: /security/check
+                login_path: /security
+            logout:
+                path:   /security/signout
+                target: /
+
+    access_control:
+        - { path: ^/secured, roles: [ROLE_ADMIN, ROLE_USER] }
 ```
+
+**app/config/routing.yml**
+
+```yaml
+_fp_whmcs:
+  resource: "@FPWHMCSBundle/Resources/config/routing.yml"
+```
+
+## Testing ##
+/secured should prompt you with a login and /signin will be your resgistration page, both should work fully providing you have the correct details in config.yml.
+
+
+
+
