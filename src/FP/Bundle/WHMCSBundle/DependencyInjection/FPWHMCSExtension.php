@@ -33,19 +33,38 @@ class FPWHMCSExtension extends Extension
       //always get the the last
       $config = end($configs);
       
-      $container->setParameter('fp.whmcs.host', $config['host']);
-      $container->setParameter('fp.whmcs.username', $config['username']);
-      $container->setParameter('fp.whmcs.password', $config['password']);
+      $container->setParameter('fp.whmcs.host', @$config['host']);
+      $container->setParameter('fp.whmcs.username', @$config['username']);
+      $container->setParameter('fp.whmcs.password', @$config['password']);
       
       if(isset($config['connector']))
       {
-        $container->setParameter('fp.whmcs.connector', $config['connector']);
+        $container->setParameter('fp.whmcs.connector', @$config['connector']);
       }
-
     }
     
     public function getAlias()
     {
       return 'fpwhmcs';
+    }   
+    
+    /**
+     * Generates the configuration tree builder.
+     *
+     * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder The tree builder
+     */
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('fpwhmcs');
+
+        $rootNode
+            ->children()
+                ->scalarNode('host')->defaultValue('')->end()
+                ->scalarNode('username')->defaultValue('')->end()
+                ->scalarNode('password')->defaultValue('')->end()
+            ->end()
+        ;
+        return $treeBuilder;
     }
 }
