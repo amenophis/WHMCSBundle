@@ -8,7 +8,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Amenophis\\Bundle\\WHMCSBundle": "" }
+        "psr-0": { "Amenophis\\Bundle\\WHMCSBundle\\": "src/" }
     },
     "require": {
         "php": ">=5.3.3",
