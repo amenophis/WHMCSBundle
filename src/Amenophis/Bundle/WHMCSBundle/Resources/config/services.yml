@@ -2,8 +2,8 @@ parameters:
   amenophis.whmcs.host:        ""
   amenophis.whmcs.username:    ""
   amenophis.whmcs.password:    ""
-  amenophis.whmcs.connector:   "FP\WHMCS\Adapter\Json\Connector"
-  amenophis.whmcs.user.provider.class: FP\Bundle\WHMCSBundle\Security\UserProvider
+  amenophis.whmcs.connector:   "Amenophis\WHMCS\Adapter\Json\Connector"
+  amenophis.whmcs.user.provider.class: Amenophis\Bundle\WHMCSBundle\Security\UserProvider
 
 services:
   amenophis.whmcs:
