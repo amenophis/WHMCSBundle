@@ -1,15 +1,15 @@
-fp_whmcs_secured:
+amenophis_whmcs_secured:
   pattern: /secured
-  defaults: { _controller: FPWHMCSBundle:Secured:index }
+  defaults: { _controller: AmenophisWHMCSBundle:Secured:index }
 
-fp_whmcs_security:
+amenophis_whmcs_security:
   pattern: /security
-  defaults: { _controller: FPWHMCSBundle:Security:index }
+  defaults: { _controller: AmenophisWHMCSBundle:Security:index }
   
-fp_whmcs_security_signout:
+amenophis_whmcs_security_signout:
   pattern: /security/signout
-  defaults: { _controller: FPWHMCSBundle:Security:signout }
+  defaults: { _controller: AmenophisWHMCSBundle:Security:signout }
 
-fp_whmcs_security_check:
+amenophis_whmcs_security_check:
   pattern: /security/check
-  defaults: { _controller: FPWHMCSBundle:Security:check }
+  defaults: { _controller: AmenophisWHMCSBundle:Security:check }

@@ -10,7 +10,7 @@
  */
 
 
-namespace FP\Bundle\WHMCSBundle\Form\Type;
+namespace Amenophis\Bundle\WHMCSBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -42,7 +42,7 @@ class UserType extends AbstractType
 
   public function getDefaultOptions()
   {
-    return array('data_class' => 'FP\Bundle\WHMCSBundle\Entity\User', );
+    return array('data_class' => 'Amenophis\Bundle\WHMCSBundle\Entity\User', );
   }
 
 }

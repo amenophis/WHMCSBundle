@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace FP\Bundle\WHMCSBundle\DependencyInjection;
+namespace Amenophis\Bundle\WHMCSBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,11 +19,11 @@ use FP\WHMCS\Adapter\Manager;
 use FP\WHMCS\Adapter\Json\Connector;
 
 /**
- * FPWHMCSExtension.
+ * AmenophisWHMCSExtension.
  * This enables us to add WHMCS connectivity through a service
  * @author Daniel Chalk <dan@french-property.com>
  */
-class FPWHMCSExtension extends Extension
+class AmenophisWHMCSExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -33,19 +33,19 @@ class FPWHMCSExtension extends Extension
       //always get the the last
       $config = end($configs);
       
-      $container->setParameter('fp.whmcs.host', @$config['host']);
-      $container->setParameter('fp.whmcs.username', @$config['username']);
-      $container->setParameter('fp.whmcs.password', @$config['password']);
+      $container->setParameter('amenophis.whmcs.host', @$config['host']);
+      $container->setParameter('amenophis.whmcs.username', @$config['username']);
+      $container->setParameter('amenophis.whmcs.password', @$config['password']);
       
       if(isset($config['connector']))
       {
-        $container->setParameter('fp.whmcs.connector', @$config['connector']);
+        $container->setParameter('amenophis.whmcs.connector', @$config['connector']);
       }
     }
     
     public function getAlias()
     {
-      return 'fpwhmcs';
+      return 'amenophis_whmcs';
     }   
     
     /**

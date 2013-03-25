@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace FP\Bundle\WHMCSBundle\Controller;
+namespace Amenophis\Bundle\WHMCSBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -23,6 +23,6 @@ class SecuredController extends Controller
     
     public function indexAction()
     {
-        return $this->render('FPWHMCSBundle:Secured:index.html.twig');
+        return $this->render('AmenophisWHMCSBundle:Secured:index.html.twig');
     }
 }

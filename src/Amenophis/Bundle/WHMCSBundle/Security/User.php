@@ -1,6 +1,6 @@
 <?php
 
-namespace FP\Bundle\WHMCSBundle\Security;
+namespace Amenophis\Bundle\WHMCSBundle\Security;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 /**

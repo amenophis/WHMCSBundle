@@ -9,24 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace FP\Bundle\WHMCSBundle;
+namespace Amenophis\Bundle\WHMCSBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use FP\Bundle\WHMCSBundle\DependencyInjection\FPWHMCSExtension;
 
 /**
- * FPWHMCSBundle.
+ * AmenophisWHMCSBundle.
  *
  * @author Daniel Chalk <snathcfrigate@gmail.com>
  */
-class FPWHMCSBundle extends Bundle
+class AmenophisWHMCSBundle extends Bundle
 {    
     public function build(ContainerBuilder $container)
     {
         parent::build($container);
 
         // register extensions that do not follow the conventions manually
-        $container->registerExtension(new FPWHMCSExtension());
+        $container->registerExtension(new AmenophisWHMCSExtension());
     }
 }

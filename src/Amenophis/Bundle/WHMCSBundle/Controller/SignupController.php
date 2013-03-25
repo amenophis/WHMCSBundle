@@ -10,7 +10,7 @@
  */
 
 
-namespace FP\Bundle\WHMCSBundle\Controller;
+namespace Amenophis\Bundle\WHMCSBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -19,8 +19,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use FP\Bundle\WHMCSBundle\Entity\User;
-use FP\Bundle\WHMCSBundle\Form\Type\UserType;
+use Amenophis\Bundle\WHMCSBundle\Entity\User;
+use Amenophis\Bundle\WHMCSBundle\Form\Type\UserType;
 /**
  * SignupController.
  *
@@ -36,7 +36,7 @@ class SignupController extends Controller
     $whmcs = $this->get('fp.whmcs');
     $user = new User($whmcs);
     $form = $this->createForm(new UserType(), $user);
-    return $this->render("FPWHMCSBundle:Signup:index.html.twig", array('form' => $form->createView(), ));
+    return $this->render("AmenophisWHMCSBundle:Signup:index.html.twig", array('form' => $form->createView(), ));
   }
 
   public function indexProcessAction()
@@ -58,12 +58,12 @@ class SignupController extends Controller
       }
     }
 
-    return $this->render("FPWHMCSBundle:Signup:index.html.twig", array('form' => $form->createView(), ));
+    return $this->render("AmenophisWHMCSBundle:Signup:index.html.twig", array('form' => $form->createView(), ));
   }
 
   public function completeAction()
   {
-    return $this->render('FPWHMCSBundle:Signup:complete.html.twig', array('account' => $this->get('session')->get('new_account')));
+    return $this->render('AmenophisWHMCSBundle:Signup:complete.html.twig', array('account' => $this->get('session')->get('new_account')));
   }
 
 }

@@ -10,11 +10,11 @@
  */
 
 
-namespace FP\Bundle\WHMCSBundle\Security\Encoder;
+namespace Amenophis\Bundle\WHMCSBundle\Security\Encoder;
 
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
-use FP\WHMCS\Adapter\Connector;
-use FP\Bundle\WHMCSBundle\Entity\User;
+use Amenophis\WHMCS\Adapter\Connector;
+use Amenophis\Bundle\WHMCSBundle\Entity\User;
 
 /**
  * @author Daniel Chalk <snathcfrigate@gmail.com>

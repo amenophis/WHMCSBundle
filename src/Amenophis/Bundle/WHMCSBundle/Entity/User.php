@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace FP\Bundle\WHMCSBundle\Entity;
+namespace Amenophis\Bundle\WHMCSBundle\Entity;
 
-use FP\WHMCS\Adapter\Connector;
+use Amenophis\WHMCS\Adapter\Connector;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\ExecutionContext;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -58,7 +58,7 @@ class User
   /**
    * Set email
    * @param string $email
-   * @return FP\Bundle\WHMCSBundle\Entity\User
+   * @return Amenophis\Bundle\WHMCSBundle\Entity\User
    */
   public function setEmail($email)
   {
@@ -78,7 +78,7 @@ class User
   /**
    * Set password
    * @param string $password
-   * @return FP\Bundle\WHMCSBundle\Entity\User
+   * @return Amenophis\Bundle\WHMCSBundle\Entity\User
    */
   public function setPassword($password)
   {

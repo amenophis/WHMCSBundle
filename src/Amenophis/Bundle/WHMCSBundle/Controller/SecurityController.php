@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
  
-namespace FP\Bundle\WHMCSBundle\Controller;
+namespace Amenophis\Bundle\WHMCSBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\SecurityContext;
@@ -37,7 +37,7 @@ class SecurityController extends Controller
       $session->remove(SecurityContext::AUTHENTICATION_ERROR);
     }
 
-    return $this->render('FPWHMCSBundle:Security:index.html.twig', array(
+    return $this->render('AmenophisWHMCSBundle:Security:index.html.twig', array(
       'last_username' => $session->get(SecurityContext::LAST_USERNAME),
       'error' => $error,
     ));
@@ -45,12 +45,12 @@ class SecurityController extends Controller
 
   public function signoutAction()
   {
-    return $this->render('FPWHMCSBundle:Security:oops.html.twig');
+    return $this->render('AmenophisWHMCSBundle:Security:oops.html.twig');
   }
 
   public function checkAction()
   {
-    return $this->render('FPWHMCSBundle:Security:oops.html.twig');
+    return $this->render('AmenophisWHMCSBundle:Security:oops.html.twig');
   }
 
 }

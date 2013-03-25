@@ -11,15 +11,15 @@
 
 
 // src/Acme/WebserviceUserBundle/Security/User/WebserviceUserProvider.php
-namespace FP\Bundle\WHMCSBundle\Security;
+namespace Amenophis\Bundle\WHMCSBundle\Security;
 
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 
-use FP\WHMCS\Adapter\Connector;
-use FP\Bundle\WHMCSBundle\Security\User;
+use Amenophis\WHMCS\Adapter\Connector;
+use Amenophis\Bundle\WHMCSBundle\Security\User;
 
 /**
  * User provider, retreives requested user accouns from WHMCS
@@ -28,7 +28,7 @@ use FP\Bundle\WHMCSBundle\Security\User;
 class UserProvider implements UserProviderInterface
 {
   /**
-   * @var FP\WHMCS\Adapter\Connector
+   * @var Amenophis\WHMCS\Adapter\Connector
    */
   protected $connector;
   
@@ -77,7 +77,7 @@ class UserProvider implements UserProviderInterface
 
   public function supportsClass($class)
   {
-    return $class === 'FP\Bundle\TestBundle\Entity\User';
+    return $class === 'Amenophis\Bundle\TestBundle\Entity\User';
   }
 
 }
