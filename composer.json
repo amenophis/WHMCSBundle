@@ -8,9 +8,8 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Amenophis\\WHMCS\\Bundle": "" }
+        "psr-0": { "Amenophis\\Bundle\\WHMCSBundle": "" }
     },
-    "target-dir": "Amenophis/WHMCS/Bundle",
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.2.*",
