@@ -15,8 +15,8 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
-use FP\WHMCS\Adapter\Manager;
-use FP\WHMCS\Adapter\Json\Connector;
+use Amenophis\WHMCS\Adapter\Manager;
+use Amenophis\WHMCS\Adapter\Json\Connector;
 
 /**
  * AmenophisWHMCSExtension.
