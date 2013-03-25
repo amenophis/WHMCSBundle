@@ -1,0 +1,20 @@
+{
+    "name": "amenophis/whmcs-bundle",
+    "description": "WHMCS Bundle for Symfony Framework",
+    "authors": [
+        {
+            "name": "Jérémy LEHERPEUR",
+            "email": "amenophis@leherpeur.net"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Amenophis\\WHMCS\\Bundle": "" }
+    },
+    "target-dir": "Amenophis/WHMCS/Bundle",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.2.*",
+        "doctrine/orm": "amenophis/fp-whmcs-connector"
+    },
+    "minimum-stability": "dev"
+}
