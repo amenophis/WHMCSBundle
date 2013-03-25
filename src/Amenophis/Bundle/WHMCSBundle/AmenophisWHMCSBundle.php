@@ -13,7 +13,7 @@ namespace Amenophis\Bundle\WHMCSBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use FP\Bundle\WHMCSBundle\DependencyInjection\FPWHMCSExtension;
+use Amenophis\Bundle\WHMCSBundle\DependencyInjection\AmenophisWHMCSExtension;
 
 /**
  * AmenophisWHMCSBundle.
