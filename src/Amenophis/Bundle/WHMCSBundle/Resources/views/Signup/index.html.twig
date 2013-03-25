@@ -4,9 +4,9 @@
 {% endblock %}            
 {% block body %}
   {% spaceless %}
-  <form action="{{ path("fp_whmcs_signup_process") }}" method="post" {{ form_enctype(form) }}>
+  <form action="{{ path("amenophis_whmcs_signup_process") }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
-    <a href="{{ path("fp_whmcs_security") }}">{{ "signup.already"|trans }}</a>
+    <a href="{{ path("amenophis_whmcs_security") }}">{{ "signup.already"|trans }}</a>
     <button type="submit">{{ "signup"|trans }}</button>
   </form>
   {% endspaceless %}
