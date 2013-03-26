@@ -28,12 +28,9 @@ use Amenophis\Bundle\WHMCSBundle\Form\Type\UserType;
  */
 class SignupController extends Controller
 {
-  /**
-   * @Route("")
-   */
   public function indexAction()
   {
-    $whmcs = $this->get('fp.whmcs');
+    $whmcs = $this->get('amenophis.whmcs');
     $user = new User($whmcs);
     $form = $this->createForm(new UserType(), $user);
     return $this->render("AmenophisWHMCSBundle:Signup:index.html.twig", array('form' => $form->createView(), ));
@@ -43,7 +40,7 @@ class SignupController extends Controller
   {
     $http_code = 200;
 
-    $whmcs = $this->get('fp.whmcs');
+    $whmcs = $this->get('amenophis.whmcs');
     $user = new User($whmcs);
     $form = $this->createForm(new UserType(), $user);
 
@@ -54,7 +51,7 @@ class SignupController extends Controller
       if ($user->persist())
       {
         $this->get('session')->set('new_account', $user);
-        return $this->redirect($this->generateUrl('fp_whmcs_signup_success'));
+        return $this->redirect($this->generateUrl('amenophis_whmcs_signup_success'));
       }
     }
 
